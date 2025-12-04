@@ -1,8 +1,8 @@
 # FAANG Stock Min-Max (Part 1) [Bloomberg SQL Interview Question]
 
-> [!info]
-> Difficulty: `Medium`
-> Company: `Bloomberg`
+>[!info]
+>Difficulty: Medium
+>Company: Bloomberg
 
 The Bloomberg terminal is the go-to resource for financial professionals, offering convenient access to a wide array of financial datasets. As a Data Analyst at Bloomberg, you have access to historical data on stock performance.
 
