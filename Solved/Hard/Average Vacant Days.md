@@ -7,7 +7,7 @@ Status: Draft
 Category: null
 Sub Category: null
 Question Link: null
-Title: Average Vacant Days_from_made_1
+Title: Average Vacant Days
 Area: Interview Prep
 Type: Interview Question
 Source: 03. Interview Prep/Interview Question/Data Lemur/Hard/Average Vacant Days_from_made_1.md
@@ -102,4 +102,5 @@ SELECT
     AVG(vacant_days_2021) AS average_vacant_days_2021
 FROM
     ListingVacantDays;
+
 ```
