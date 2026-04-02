@@ -83,7 +83,6 @@ catalog table:
 
   
 
----
 
 **SQL Schema**
 
@@ -161,7 +160,6 @@ Table: product
 +--------------+
 ```
 
----
 
 **SQL Schema**
 
@@ -242,7 +240,6 @@ Table: products
 +---------------+
 ```
 
----
 
 **SQL Schema**
 
@@ -346,7 +343,6 @@ Table: rentals
 
   
 
----
 
 ==**A complex Problem**==
 
@@ -356,7 +352,6 @@ This problem requires handling three cases:
 2. If multiple records exist for a month, pick the **latest event_date** in that month.
 3. If no records exist for a month, use the **latest prior record**.
 
----
 
 ### **Solution Approach**
 
@@ -364,7 +359,6 @@ This problem requires handling three cases:
 2. **Find the latest record for each customer in each month**.
 3. **Use a window function to carry forward the latest status from previous months if no record exists for a month**.
 
----
 
 ### **SQL Query**
 
@@ -421,7 +415,6 @@ WHERE rn = 1
 ORDER BY customer_id, month_start;
 ```
 
----
 
 ### **Explanation**
 
@@ -432,7 +425,6 @@ ORDER BY customer_id, month_start;
 5. `**FinalData**`: Joins data with `LatestPerMonth`, carrying forward the last known status if missing.
 6. **Final** `**SELECT**`: Picks the latest available record for each month.
 
----
 
 ### **Handling Edge Cases**
 
@@ -444,11 +436,9 @@ ORDER BY customer_id, month_start;
 
 🚀 **This ensures an accurate, gap-free status report for all months in 2019!** 🚀
 
----
 
 Here are the answers to the questions you faced in your phone interview rounds:
 
----
 
 ### **Data Engineering Questions**
 
@@ -486,7 +476,6 @@ Common Hive compression formats include:
 - **Bzip2 (.bz2)**
 - **LZO (Splittable, used in HDFS for large data)**
 
----
 
 ### **SQL Questions**
 
@@ -524,7 +513,6 @@ If using variables:
 SELECT 5 + 10 AS sum;
 ```
 
----
 
 ### **Behavioral Questions**
 
@@ -538,7 +526,6 @@ Example Answer:
 
 _"In one project, we had a strict deadline for launching a data pipeline. The best practice was to implement full data validation at every stage, but it would have delayed the release. Instead, we prioritized critical checks and implemented a post-deployment monitoring system to identify anomalies. This allowed us to meet the deadline while ensuring data integrity over time."_
 
----
 
 Hi folks, just wanna share a few sql questions I had on a recent Amazon Data Scientist phone interview
 
@@ -574,5 +561,3 @@ Key for this table is TITLE_ID
     approach and kept asking me for an alternative approach. I guess he  
     found it unintuitive? Anyone else got another idea please?  
     
-
----
