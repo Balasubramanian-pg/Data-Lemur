@@ -74,11 +74,9 @@ Assumption:
 
 international_calls_pct
 
----
 
 50.0
 
----
 
 ### Explanation
 
