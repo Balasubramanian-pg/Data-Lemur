@@ -23,7 +23,6 @@ Date: ''
 ---
 Write a SQL query to display whether the **average salary** of employees in a **department** is **higher/lower/same** compared to the **company's average salary**, **per month**.
 
----
 
 ### 📄 **Tables Involved**
 
@@ -46,7 +45,6 @@ Write a SQL query to display whether the **average salary** of employees in a **
 |2|2|
 |3|2|
 
----
 
 ### 🎯 **Objective**
 
@@ -60,7 +58,6 @@ For each **pay month** and **department**, compare the **department average sala
 |2017-02|1|same|
 |2017-02|2|same|
 
----
 
 ### 🛠️ **Query (with explanation)**
 
@@ -91,7 +88,6 @@ FROM t1
 ORDER BY 1 DESC;
 ```
 
----
 
 ### 🧠 **Key Concepts Used**
 
@@ -100,6 +96,5 @@ ORDER BY 1 DESC;
 - `AVG() OVER (PARTITION BY ...)`: To calculate rolling averages over departments and company per month.
 - `CASE`: To label each comparison as `higher`, `lower`, or `same`.
 
----
 
 Let me know if you'd like this rewritten in another SQL dialect (e.g., PostgreSQL or SQL Server) or turned into a practice assignment!
