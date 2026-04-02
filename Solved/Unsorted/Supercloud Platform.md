@@ -65,11 +65,9 @@ Write a query that identifies the customer IDs of these Supercloud customers.
 
 customer_id
 
----
 
 1
 
----
 
 ### Explanation:
 
