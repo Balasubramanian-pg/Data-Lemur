@@ -23,7 +23,6 @@ Of course! This query is a fantastic example of a correlated subquery used to ca
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -31,7 +30,6 @@ The business question being asked by this SQL query is:
 
 **"For each product type, what is the cumulative (running total) quantity purchased over time? Show a list of every transaction, and for each one, display the total quantity purchased for that product's type up to and including that order's date."**
 
----
 
 ### 2. Table Schema
 
@@ -51,7 +49,6 @@ CREATE TABLE total_trans (
 CREATE INDEX idx_product_date ON total_trans (product_type, order_date);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Correlated Subquery)
 
@@ -76,7 +73,6 @@ ORDER BY
     t1.product_type, t1.order_date; -- Added for readable output
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -97,7 +93,6 @@ This query calculates a running total using a **correlated subquery**. This mean
 
 **Performance Issue:** This method is very inefficient. If `total_trans` has 10,000 rows, the inner subquery will be executed 10,000 times, leading to poor performance on large tables.
 
----
 
 ### 5. Another SQL Method (Method 2: Using a Window Function)
 
@@ -117,7 +112,6 @@ ORDER BY
     product_type, order_date;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
