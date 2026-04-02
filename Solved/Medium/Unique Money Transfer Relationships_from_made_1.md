@@ -21,7 +21,6 @@ Of course! This is a fantastic query that uses the `INTERSECT` set operator, whi
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -29,7 +28,6 @@ The business question being asked by this SQL query is:
 
 **"How many unique, two-way (or mutual) money transfer relationships exist in our data? A two-way relationship is defined as one where User A has paid User B, and User B has also paid User A at some point."**
 
----
 
 ### 2. Table Schema
 
@@ -50,7 +48,6 @@ CREATE TABLE payments (
 CREATE INDEX idx_payments_pair ON payments (payer_id, recipient_id);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Using `INTERSECT`)
 
@@ -82,7 +79,6 @@ FROM
     two_way_rel;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -110,7 +106,6 @@ This query uses a Common Table Expression (CTE) and the `INTERSECT` operator to 
     *   Since `two_way_rel` contains both `(1, 2)` and `(2, 1)` for a single mutual relationship, simply counting the rows would give us `2`.
     *   By dividing the total count by 2, we correct for this double-counting and get the number of unique *relationships* (which is 1).
 
----
 
 ### 5. Another SQL Method (Method 2: Using a `SELF-JOIN`)
 
@@ -127,7 +122,6 @@ WHERE
     p1.payer_id < p1.recipient_id;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
