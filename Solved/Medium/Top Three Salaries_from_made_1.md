@@ -88,7 +88,6 @@ The output displays the high earners in each department.
     
 - In the Data Science department, both Noah Johnson and William Davis earn $6,800, with Noah listed before William due to alphabetical ordering.
 
----
 
 Looking at this problem, I need to:
 
