@@ -20,7 +20,6 @@ Date: ''
 
 Of course! This is an excellent query that combines filtering, aggregation, and group-level filtering with `HAVING`. It's a great candidate for analysis.
 
-***
 
 ### 1. The Question
 
@@ -30,7 +29,6 @@ The business or data question being answered here is:
 
 *Note: The query title "average post hiatus" is slightly different from what the query calculates. The query computes the total duration of a user's posting activity, not the average time *between* their individual posts.*
 
----
 
 ### 2. Table Schema
 
@@ -53,7 +51,6 @@ CREATE INDEX idx_posts_post_date ON posts (post_date);
 CREATE INDEX idx_posts_user_date ON posts (user_id, post_date);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: `DATE_PART` with `HAVING`)
 
@@ -73,7 +70,6 @@ HAVING
     COUNT(post_id) > 1;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -100,7 +96,6 @@ This query filters posts from a specific year and then calculates a time differe
     *   `::DATE`: This is a PostgreSQL-specific cast that converts the `TIMESTAMP` to a `DATE`, removing the time component.
     *   `MAX(...) - MIN(...)`: Subtracting two dates in PostgreSQL results in an integer representing the number of days between them. This result is aliased as `days_between`.
 
----
 
 ### 5. Another SQL Method (Method 2: SARGable `WHERE` Clause)
 
@@ -122,7 +117,6 @@ HAVING
     COUNT(post_id) > 1;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
