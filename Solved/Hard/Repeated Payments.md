@@ -54,11 +54,9 @@ Using the transactions table, identify any payments made at the same merchant wi
 
 **payment_count**
 
----
 
 1
 
----
 
 ### Explanation
 
