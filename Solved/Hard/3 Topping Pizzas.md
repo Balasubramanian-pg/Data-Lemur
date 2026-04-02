@@ -63,7 +63,6 @@ Additionally, they are arranged alphabetically; in the dictionary, the chicken c
 The dataset you are querying against may have different input & output - **this is just an example**!
 
 ## Solution
----
 To solve this problem, we need to generate all possible combinations of 3 distinct pizza toppings, calculate their total cost, and then sort the results based on the total cost in descending order. If there are ties in the total cost, we sort the toppings in alphabetical order.
 
 Here's a SQL query that accomplishes this:
