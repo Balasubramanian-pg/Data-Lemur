@@ -20,7 +20,6 @@ Of course! This is a fantastic query that uses a correlated subquery inside a CT
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -28,7 +27,6 @@ The business question being asked by this SQL query is:
 
 **"Which employees are compensation outliers within their own job title? An 'outlier' is defined as any employee whose salary is more than double the average salary for their title ('Overpaid') or less than half the average salary for their title ('Underpaid')."**
 
----
 
 ### 2. Table Schema
 
@@ -49,7 +47,6 @@ CREATE TABLE employee_pay (
 CREATE INDEX idx_employee_title ON employee_pay (title);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: CTE with Correlated Subquery)
 
@@ -81,7 +78,6 @@ WHERE
     status IN ('Underpaid', 'Overpaid');
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -105,7 +101,6 @@ This query uses a CTE and correlated subqueries to categorize each employee's sa
 
 **Performance Issue:** This method is very inefficient. If you have 10,000 employees, the correlated subquery (which scans the table) will be executed up to 20,000 times.
 
----
 
 ### 5. Another SQL Method (Method 2: Using a Window Function in a CTE)
 
@@ -137,7 +132,6 @@ WHERE
     OR salary < 0.5 * avg_salary_for_title;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
