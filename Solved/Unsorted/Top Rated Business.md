@@ -20,7 +20,6 @@ Of course! This is a great query that calculates aggregate statistics over an en
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -30,7 +29,6 @@ The business question being asked by this SQL query is:
 
 The query will produce a single row with two columns: the absolute number of top reviews and their percentage of the total.
 
----
 
 ### 2. Table Schema
 
@@ -52,7 +50,6 @@ CREATE INDEX idx_reviews_stars ON reviews (review_stars);
 ```
 *Note: The query's column alias `business_num` is slightly misleading, as the query counts the number of top-rated *reviews*, not the number of top-rated *businesses*. My explanation will focus on what the query actually does.*
 
----
 
 ### 3. Structured SQL Query (Method 1: Conditional `SUM` and `COUNT`)
 
@@ -76,7 +73,6 @@ FROM
     reviews;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -94,7 +90,6 @@ This query calculates two summary metrics over the entire `reviews` table in a s
     *   **`ROUND(..., 2)`**: Rounds the final percentage to two decimal places for clean presentation.
 4.  Since there is no `GROUP BY` clause, the query aggregates over the entire table and returns a single summary row.
 
----
 
 ### 5. Another SQL Method (Method 2: Using `AVG` for Percentage)
 
@@ -111,7 +106,6 @@ FROM
     reviews;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
