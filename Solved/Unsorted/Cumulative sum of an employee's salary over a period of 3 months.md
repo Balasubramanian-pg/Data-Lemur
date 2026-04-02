@@ -23,7 +23,6 @@ Date: ''
 ---
 Get the **cumulative sum of an employee's salary** over a **3-month window**, **excluding the most recent month** for each employee.
 
----
 
 ###  **Table:** `**employee**`
 
@@ -40,7 +39,6 @@ Get the **cumulative sum of an employee's salary** over a **3-month window**, **
 |3|3|60|
 |3|4|70|
 
----
 
 ###  **Objective**
 
@@ -48,7 +46,6 @@ Get the **cumulative sum of an employee's salary** over a **3-month window**, **
 - Then calculate the **3-month rolling sum** (including the current month and 2 preceding ones).
 - Output should be sorted by **Id (ascending)** and **Month (descending)**.
 
----
 
 ###  **Approach**
 
@@ -56,7 +53,6 @@ Get the **cumulative sum of an employee's salary** over a **3-month window**, **
 2. **Filter out rows for the most recent month**.
 3. **Apply a cumulative window** (`ROWS BETWEEN 2 PRECEDING AND CURRENT ROW`) to get 3-month sum.
 
----
 
 ###  **Final Query (Well-Formatted)**
 
@@ -82,7 +78,6 @@ WHERE Month < recent_month -- exclude the most recent month
 ORDER BY Id ASC, Month DESC;
 ```
 
----
 
 ###  **Result**
 
@@ -96,6 +91,5 @@ ORDER BY Id ASC, Month DESC;
 |3|3|100|
 |3|2|40|
 
----
 
 Let me know if you'd like this tailored for a different SQL dialect like PostgreSQL or want to build this into a training exercise!
