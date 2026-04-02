@@ -66,7 +66,6 @@ Product ID 123424 is analyzed for multiple years: 2019, 2020, 2021, and 2022.
 
 To calculate the year-on-year growth rate, we compare the current year's spend with the previous year's spend.For instance, the spend grew by 24.62% from 2020 to 2021, indicating a positive growth rate.
 
----
 
 Looking at this problem, I need to:
 
