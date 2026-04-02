@@ -21,7 +21,6 @@ Of course! This is an excellent query that uses a subquery to filter a main quer
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -29,7 +28,6 @@ The business question being asked by this SQL query is:
 
 **"For customers who have purchased Photoshop, what is the total revenue generated from their purchases of *other* Adobe products (i.e., everything except Photoshop)? List the total revenue for each of these customers."**
 
----
 
 ### 2. Table Schema
 
@@ -50,7 +48,6 @@ CREATE TABLE adobe_transactions (
 CREATE INDEX idx_adobe_customer_product ON adobe_transactions (customer_id, product);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Subquery with `IN`)
 
@@ -76,7 +73,6 @@ GROUP BY
     customer_id;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -94,7 +90,6 @@ This query works by first identifying the target customers with a subquery and t
     *   **`GROUP BY customer_id`**: It then groups these remaining rows by customer.
     *   **`SELECT customer_id, SUM(revenue) AS revenue`**: Finally, for each customer group, it calculates the `SUM` of the `revenue`, giving the total revenue from their non-Photoshop purchases.
 
----
 
 ### 5. Another SQL Method (Method 2: Conditional Aggregation with `HAVING`)
 
@@ -113,7 +108,6 @@ HAVING
     COUNT(CASE WHEN product = 'Photoshop' THEN 1 END) > 0;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
