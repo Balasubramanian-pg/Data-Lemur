@@ -3,4 +3,3 @@
 > Problem info:
 > Difficulty: `Easy`
 > Company: `FAANG`
-
