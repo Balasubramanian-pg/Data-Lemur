@@ -60,7 +60,6 @@ Within the "appliance" category, the top two highest-grossing products are "refr
 
 In the "electronics" category, the top two highest-grossing products are "vacuum" and "wireless headset."
 
----
 
 Looking at this problem, I need to:
 
