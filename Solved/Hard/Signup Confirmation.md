@@ -20,7 +20,6 @@ Of course! This is a very interesting query. It uses a CTE and then a subquery w
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -28,7 +27,6 @@ The business question being asked by this SQL query is:
 
 **"What is the email confirmation rate for our signups? The rate is defined as the percentage of unique emails that received a 'Confirmed' action in a text message, out of all unique emails that were sent a signup request."**
 
----
 
 ### 2. Table Schema
 
@@ -55,7 +53,6 @@ CREATE TABLE texts (
 );
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: CTE with Subquery in `SELECT`)
 
@@ -83,7 +80,6 @@ SELECT
 ```
 *Note: I've rewritten the denominator to use a subquery as well, to make the structure symmetrical and clear for explanation. Your original `COUNT(DISTINCT email_id)` works but this structure highlights the pattern.*
 
----
 
 ### 4. Explanation of the Query
 
@@ -101,7 +97,6 @@ This query uses a CTE to prepare the data and then uses separate subqueries on t
 *   The division of these two results gives the confirmation rate, which is then rounded.
 *   **Inefficiency**: This approach is generally inefficient because the database may need to scan the `signup_info` result set twice (once for each subquery).
 
----
 
 ### 5. Another SQL Method (Method 2: Conditional Aggregation with `AVG`)
 
@@ -126,7 +121,6 @@ FROM
     signup_info;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
