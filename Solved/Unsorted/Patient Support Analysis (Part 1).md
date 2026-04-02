@@ -53,17 +53,14 @@ If you like this question, try out [Patient Support Analysis (Part 2)](https://d
 
 **policy_holder_count**
 
----
 
 1
 
----
 
 ### Explanation:
 
 The only caller who made three, or more calls is policy holder ID 2.
 
----
 
 ### Approach
 
