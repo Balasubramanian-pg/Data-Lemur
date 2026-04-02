@@ -56,7 +56,6 @@ Output the user id, spend and transaction date.
 
 The dataset you are querying against may have different input & output - **this is just an example**!
 
----
 
 Okay, I have this problem about extracting the third transaction for each user from an Uber transactions dataset. The task is to write a SQL query that outputs the user's id, spend amount, and transaction date for each user's third transaction.
 
