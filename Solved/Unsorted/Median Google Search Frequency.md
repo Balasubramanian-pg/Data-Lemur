@@ -54,11 +54,9 @@ Write a query to report the median of searches made by a user. Round the median 
 
 median
 
----
 
 2.5
 
----
 
 By expanding the search_frequency table, we get [1, 1, 2, 2, 3, 3, 3, 4] which has a median of 2.5 searches per user.
 
