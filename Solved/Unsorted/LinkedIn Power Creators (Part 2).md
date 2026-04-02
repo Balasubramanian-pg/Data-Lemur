@@ -21,7 +21,6 @@ Of course! This is a fascinating and somewhat advanced version of the "power cre
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -31,7 +30,6 @@ This query answers a more complex business question than simply finding power cr
 
 The key nuance is the "every single company" part, which is what the `GROUP BY` and `HAVING` clauses are designed to solve.
 
----
 
 ### 2. Table Schema
 
@@ -63,7 +61,6 @@ CREATE TABLE employee_company (
 );
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Using `MIN()` on a Flag)
 
@@ -95,7 +92,6 @@ ORDER BY
     profile_id;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -117,7 +113,6 @@ This query identifies the desired individuals in two logical steps.
     *   If a person fails the condition for even *one* company, their flags will be something like `(1, 1, 0, ...)`. The minimum value of this set is `0`.
     *   Therefore, the condition `MIN(power_creator_flag) = 1` is a concise way of saying "keep only the groups where every single flag was a 1".
 
----
 
 ### 5. Another SQL Method (Method 2: Comparing `COUNT`s)
 
@@ -144,7 +139,6 @@ ORDER BY
     profile_id;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
