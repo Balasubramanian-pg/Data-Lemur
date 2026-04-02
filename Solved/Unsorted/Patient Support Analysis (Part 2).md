@@ -52,11 +52,9 @@ Write a query to calculate the percentage of calls that cannot be categorised. R
 
 **uncategorised_call_pct**
 
----
 
 20.0
 
----
 
 ### Explanation:
 
