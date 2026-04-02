@@ -21,7 +21,6 @@ Of course! This is a great, straightforward query that highlights a common busin
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -31,7 +30,6 @@ The business question being asked by this SQL query is:
 
 The query defines a "deal size" as the `yearly_seat_cost` multiplied by the `num_seats` for a single contract.
 
----
 
 ### 2. Table Schema
 
@@ -50,7 +48,6 @@ CREATE TABLE contracts (
 );
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Using `AVG`)
 
@@ -63,7 +60,6 @@ FROM
     contracts;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -84,7 +80,6 @@ This query calculates a single aggregate value for the entire `contracts` table.
 5.  **`AS average_deal_size`**
     *   Finally, the resulting single value is placed into a column named `average_deal_size`. Since there is no `GROUP BY` clause, the query returns just one row and one column.
 
----
 
 ### 5. Another SQL Method (Method 2: Using `SUM` and `COUNT`)
 
@@ -100,7 +95,6 @@ FROM
     contracts;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
