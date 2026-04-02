@@ -73,7 +73,6 @@ Order ID 1 is now associated with Pizza and Order ID 2 is paired with Chow Mein.
 
 Order ID 7 remains unchanged and is still associated with Tandoori Chicken. This preserves the order sequence ensuring that the last odd order ID remains unaltered.
 
----
 
 Looking at this problem, I need to understand the swapping pattern:
 
