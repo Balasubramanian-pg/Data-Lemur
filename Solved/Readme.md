@@ -117,4 +117,3 @@ Here's the table with the names of the questions wrapped in double brackets:
 | Facebook     | [[Weekly Churn Rates]]                    | SQL      | Hard       |
 | Accenture    | [[Signup Confirmation]]          | SQL      | Hard       |
 | Amazon       | [[Server Utilization Time]]               | SQL      | Hard       |
-
