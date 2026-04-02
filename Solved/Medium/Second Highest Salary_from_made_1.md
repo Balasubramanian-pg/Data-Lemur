@@ -48,11 +48,9 @@ It's possible that multiple employees may share the same second highest salary. 
 
 second_highest_salary
 
----
 
 2230
 
----
 
 The output represents the second highest salary among all employees. In this case, the second highest salary is $2,230.
 
