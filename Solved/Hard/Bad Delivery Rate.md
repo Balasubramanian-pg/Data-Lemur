@@ -19,7 +19,6 @@ Date: ''
 
 Of course! This is a fantastic query that uses a Common Table Expression (CTE) to create a multi-step logical flow. It's an excellent example to break down.
 
-***
 
 ### 1. The Question
 
@@ -27,7 +26,6 @@ The business question being asked by this SQL query is:
 
 **"For customers who signed up in June 2022, what was the percentage of 'bad experiences' on orders they placed within their first 14 days? A 'bad experience' is defined as any order that was not 'completed successfully'."**
 
----
 
 ### 2. Table Schema
 
@@ -58,7 +56,6 @@ CREATE INDEX idx_customers_signup ON customers (signup_timestamp);
 CREATE INDEX idx_orders_customer ON orders (customer_id);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Using a Common Table Expression - CTE)
 
@@ -95,7 +92,6 @@ WHERE
 ```
 *Note: I've updated `DATE_PART` to the more standard `EXTRACT` and adjusted the percentage calculation slightly to `100.0 * ...` to ensure floating-point division, which is a common practice for portability across different SQL databases.*
 
----
 
 ### 4. Explanation of the Query
 
@@ -117,7 +113,6 @@ This query uses a CTE to first prepare a dataset and then run a final calculatio
     *   `100.0 * ... / ...`: The ratio of bad orders to total orders is calculated, and multiplying by `100.0` converts it to a percentage.
     *   `ROUND(..., 2)`: The final result is rounded to two decimal places.
 
----
 
 ### 5. Another SQL Method (Method 2: Single Combined Query)
 
@@ -141,7 +136,6 @@ WHERE
     AND o.order_timestamp < c.signup_timestamp + INTERVAL '14 day';
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
