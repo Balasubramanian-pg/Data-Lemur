@@ -21,7 +21,6 @@ Of course! This is a fantastic query that uses a window function within a Common
 
 Here is the complete breakdown.
 
-***
 
 ### 1. The Question
 
@@ -29,7 +28,6 @@ The business question being asked by this SQL query is:
 
 **"How many unique users made their very first transaction with a value of $50 or more?"**
 
----
 
 ### 2. Table Schema
 
@@ -49,7 +47,6 @@ CREATE TABLE user_transactions (
 CREATE INDEX idx_user_trans_date ON user_transactions (user_id, transaction_date);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Using a Window Function in a CTE)
 
@@ -76,7 +73,6 @@ WHERE
     AND spend >= 50;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -98,7 +94,6 @@ This query uses a two-step process, made clear by the CTE, to find the answer ef
     *   `AND spend >= 50`: It then further filters that set, keeping only the first transactions where the spend was 50 or more.
 3.  **`SELECT COUNT(DISTINCT user_id) AS users`**: Finally, it counts the number of unique `user_id`s that remain after the filtering, giving the final answer.
 
----
 
 ### 5. Another SQL Method (Method 2: Using a Subquery with `GROUP BY` and `JOIN`)
 
@@ -125,7 +120,6 @@ WHERE
     t.spend >= 50;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
