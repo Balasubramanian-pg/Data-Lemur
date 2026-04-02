@@ -76,17 +76,14 @@ _Effective April 4th 2023, we added an assumption to the question to provide add
 
 **confirm_rate**
 
----
 
 0.67
 
----
 
 ### Explanation:
 
 67% of users have successfully completed their signup and activated their accounts. The remaining 33% have not yet replied to the text to confirm their signup.
 
----
 
 Looking at this problem, I need to:
 
