@@ -23,7 +23,6 @@ The business question being asked by this SQL query is:
 
 **"What is the overall invalid search result percentage for each country? The raw data provides search volumes and invalid rates per category, so we need to aggregate these to find the unified country-level percentage."**
 
----
 
 ### 2. Table Schema
 
@@ -43,7 +42,6 @@ CREATE TABLE search_category (
 CREATE INDEX idx_search_country ON search_category (country);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Using a Common Table Expression - CTE)
 
@@ -73,7 +71,6 @@ FROM
     search_details;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -97,7 +94,6 @@ This query uses a two-step approach with a CTE to first "reconstitute" the raw c
     *   `* 100.0`: Converts this ratio back into a percentage.
     *   `ROUND(..., 2)`: Rounds the final result to two decimal places for clean presentation.
 
----
 
 ### 5. Another SQL Method (Method 2: Single Aggregation Query)
 
@@ -122,7 +118,6 @@ GROUP BY
     country;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
