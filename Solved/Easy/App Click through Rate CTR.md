@@ -56,7 +56,6 @@ Let's consider an example of App 123. This app has a click-through rate (CTR) of
 
 To calculate the CTR, we divide the number of clicks by the number of impressions, and then multiply the result by 100.0 to express it as a percentage. In this case, 1 divided by 2 equals 0.5, and when multiplied by 100.0, it becomes 50.00%. So, the CTR of App 123 is 50.00%.
 
----
 To calculate the click-through rate (CTR) for each app in 2022, you can use a SQL query with conditional aggregation. Here's how you can do it:
 
 SQL
