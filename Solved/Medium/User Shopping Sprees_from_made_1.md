@@ -48,11 +48,9 @@ List the user IDs who have gone on at least 1 shopping spree in ascending order.
 
 user_id
 
----
 
 2
 
----
 
 ### Explanation
 
