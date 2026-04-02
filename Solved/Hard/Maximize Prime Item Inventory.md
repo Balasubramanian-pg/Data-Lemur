@@ -71,7 +71,6 @@ Assumptions:
 |prime_eligible|9285|
 |not_prime|6|
 
----
 
 Looking at this problem, I need to:
 
