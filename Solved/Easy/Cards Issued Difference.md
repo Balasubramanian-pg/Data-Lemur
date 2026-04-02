@@ -85,7 +85,6 @@ If we run this query on the provided example input, we'll get the following outp
 
 This output matches the expected result, showing the difference in issued cards between the best and worst months for each card.
 
----
 ### Alternative Method Using Window Functions
 
 We can also use window functions to find the maximum and minimum issued amounts for each card, and then calculate the difference.
