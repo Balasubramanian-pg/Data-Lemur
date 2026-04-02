@@ -61,7 +61,6 @@ Note that the table below displays randomly selected AAPL data.
 
 Apple Inc. (AAPL) achieved its highest opening price of $176.76 in May 2023 and its lowest opening price of $142.28 in January 2023.
 
----
 
 Looking at this problem, I need to:
 
