@@ -51,11 +51,9 @@ _Effective June 14th, 2023, the problem statement has been revised and additiona
 
 mode
 
----
 
 2
 
----
 
 ### Explanation:
 
