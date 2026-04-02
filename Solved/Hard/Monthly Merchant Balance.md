@@ -24,7 +24,6 @@ The business question being asked by this SQL query is:
 
 *Note: The title "monthly merchant balance" suggests a per-merchant calculation, but the query as written calculates a single, aggregate balance. To make it per-merchant, a `merchant_id` would need to be added to the `GROUP BY` and `PARTITION BY` clauses.*
 
----
 
 ### 2. Table Schema
 
@@ -45,7 +44,6 @@ CREATE TABLE transactions (
 CREATE INDEX idx_transactions_date ON transactions (transaction_date);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Multi-Step CTEs)
 
@@ -85,7 +83,6 @@ ORDER BY
     transaction_day ASC;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -107,7 +104,6 @@ This query uses a sequential, multi-step process to transform the raw transactio
 *   `PARTITION BY month`: This is a crucial instruction. It tells the `SUM` function to operate independently for each month. The running total will accumulate within a month and **reset** at the start of the next month.
 *   `ORDER BY transaction_day ASC`: This sorts the data within each partition (each month) by day, ensuring the sum accumulates chronologically.
 
----
 
 ### 5. Another SQL Method (Method 2: Combined CTE)
 
@@ -141,7 +137,6 @@ ORDER BY
     transaction_day ASC;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
