@@ -24,7 +24,6 @@ The business question being asked by this SQL query is:
 
 **"For each session type (e.g., 'tweeter', 'viewer'), who were the most engaged users in terms of total time spent during the month of January 2022? Provide a ranked list of users for each session type, from most time spent to least."**
 
----
 
 ### 2. Table Schema
 
@@ -46,7 +45,6 @@ CREATE TABLE sessions (
 CREATE INDEX idx_sessions_date_user_type ON sessions (start_date, user_id, session_type);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: CTE for Aggregation, then Ranking)
 
@@ -76,7 +74,6 @@ FROM
     tweeter_sessions;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -97,7 +94,6 @@ This query uses a two-step process to first calculate user engagement and then r
     *   **`ORDER BY total_duration DESC`**: Within each partition, the rows are sorted by `total_duration` in descending order, so the user with the most time spent gets rank #1.
     *   **`DENSE_RANK()`**: This specific ranking function assigns the same rank to users with the same duration, and there are no gaps in the ranking sequence (e.g., 1, 2, 2, 3).
 
----
 
 ### 5. Another SQL Method (Method 2: Combined Aggregation and Window Function)
 
@@ -117,7 +113,6 @@ GROUP BY
     session_type;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
