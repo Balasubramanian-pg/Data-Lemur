@@ -18,7 +18,6 @@ Date: ''
 ---
 Of course! This is a great real-world business query that uses a CTE to simplify a multi-step calculation. It's an excellent candidate for analysis.
 
-***
 
 ### 1. The Question
 
@@ -26,7 +25,6 @@ The business question being asked by this SQL query is:
 
 **"Assuming a 365-day year, how many days was each consultant 'on the bench' (i.e., not actively staffed on a consulting engagement)? Provide a list of each consultant's employee ID and their total calculated bench days."**
 
----
 
 ### 2. Table Schema
 
@@ -53,7 +51,6 @@ CREATE TABLE consulting_engagements (
 );
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: Using a Common Table Expression - CTE)
 
@@ -82,7 +79,6 @@ GROUP BY
     employee_id;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -103,7 +99,6 @@ This query uses a CTE to first calculate the duration of individual projects and
     *   `SUM(non_bench_days)`: It first sums up the duration of all projects for that specific consultant.
     *   `365 - ...`: It then subtracts this total from `365` to calculate the number of days they were *not* on a project. This is aliased as `bench_days`.
 
----
 
 ### 5. Another SQL Method (Method 2: Direct Aggregation without CTE)
 
@@ -123,7 +118,6 @@ GROUP BY
     s.employee_id;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
