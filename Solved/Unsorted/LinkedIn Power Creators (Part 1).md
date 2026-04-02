@@ -21,7 +21,6 @@ Of course! This is a classic and very intuitive query that directly compares rel
 
 Here is the complete analysis.
 
-***
 
 ### 1. The Question
 
@@ -29,7 +28,6 @@ The business question being asked by this SQL query is:
 
 **"Which individuals on the platform are 'power creators', defined as having more followers on their personal profile than their employer's company page has? Provide a sorted list of their profile IDs."**
 
----
 
 ### 2. Table Schema
 
@@ -60,7 +58,6 @@ ADD CONSTRAINT fk_employer
 FOREIGN KEY (employer_id) REFERENCES company_pages(company_id);
 ```
 
----
 
 ### 3. Structured SQL Query (Method 1: `INNER JOIN` with Direct Comparison)
 
@@ -79,7 +76,6 @@ ORDER BY
     p.profile_id ASC;
 ```
 
----
 
 ### 4. Explanation of the Query
 
@@ -99,7 +95,6 @@ This query finds the "power creators" by joining employee and company data and t
 4.  **`ORDER BY p.profile_id ASC`**
     *   This sorts the resulting list of profile IDs in ascending order for a clean, predictable output.
 
----
 
 ### 5. Another SQL Method (Method 2: Using a Correlated Subquery)
 
@@ -124,7 +119,6 @@ ORDER BY
     p.profile_id ASC;
 ```
 
----
 
 ### 6. Explanation of the Alternative Query
 
