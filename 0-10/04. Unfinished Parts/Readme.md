@@ -1,4 +1,4 @@
-# Unfinished Parts [Tesla SQL Interview Question] 
+# Unfinished Parts 
 
 > Problem info:
 > Difficulty: `Easy`
