@@ -1,21 +1,3 @@
----
-Created: null
-Company:
-- null
-Difficulty: null
-Status: Draft
-Category: null
-Sub Category: null
-Question Link: null
-Title: Data Lemur
-Area: Interview Prep
-Type: Interview Question
-Source: 03. Interview Prep/Interview Question/Data Lemur/Data Lemur.md
-Updated: ''
-Tags: ''
-Topic: ''
-Date: ''
----
 Here's the table with the names of the questions wrapped in double brackets:
 
 | Company      | Title                                     | Category | Difficulty |
